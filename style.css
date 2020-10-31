@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+  font-family: "Itim", cursive;
+  font-family: "Lobster", cursive;
+}
+p {
+  color: #555;
+  line-height: 24px;
+}
+span {
+  color: #999;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+.login {
+  position: relative;
+  display: flex;
+  margin: 100px auto;
+  width: 1000px;
+  height: 550px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 30px;
+  border-radius: 5px;
+}
+.img-login {
+  position: relative;
+  width: 40%;
+  object-fit: cover;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.login-item {
+  margin: 10px 70px 20px 70px;
+}
+.login-input {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+  color: #666;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: 0.1px solid rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.login-submit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgb(245, 99, 162);
+}
+.login-submit-forget {
+  position: relative;
+  text-decoration: none;
+  color: rgb(245, 99, 162);
+}
+.login-submit-next {
+  width: 100px;
+  height: 45px;
+  background-color: rgb(245, 99, 162);
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 30px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.login-submit-next:hover {
+  box-shadow: none;
+}
+.fas.fa-arrow-right {
+  margin-left: 6px;
+}
+.login-socicals {
+  display: flex;
+  justify-content: space-between;
+}
+.login-socicals-fb,
+.login-socicals-gg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 220px;
+  height: 40px;
+  background-color: #fff;
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+}
+.login-socicals-gg--icon,
+.login-socicals-fb--icon {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+}
+.login-no-acc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.login-no-acc a {
+  color: rgb(245, 99, 162);
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.login-submit-forget:hover::after,
+.login-no-acc a:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+
+  /* Adjust height and bottom values to work with selected font */
+  height: 0.05em;
+  bottom: 0.1em;
+
+  /* Create gradient */
+  background-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgb(245, 99, 162) 30%,
+    rgb(245, 99, 162) 50%,
+    rgb(245, 99, 162) 70%,
+    transparent 100%
+  );
+
+  /* Set-up fade-in animation */
+  opacity: 0;
+  animation: fadeIn 400ms ease-out forwards;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+.login-close {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  padding: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #fff;
+  align-items: center;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.3s ease;
+}
+.login-close:hover {
+  transform: rotate(90deg);
+  cursor: pointer;
+  box-shadow: none;
+}
+.fas.fa-times {
+  color: #444;
+  font-size: 18px;
+}
