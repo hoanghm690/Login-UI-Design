@@ -1,0 +1,19 @@
+@media (max-width: 1024px) {
+  .login {
+    width: 600px;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+  }
+  .login-item2 {
+    display: none;
+  }
+  @keyframes example {
+    from {
+      transform: translateX(125%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+}
